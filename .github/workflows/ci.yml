@@ -10,11 +10,11 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-    - uses: Gr1N/setup-poetry@v7
-    - run: poetry install
-    - name: Run tests and collect coverage
-      run: poetry run pytest --cov
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v2
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+      - uses: Gr1N/setup-poetry@v7
+      - run: poetry install
+      - name: Run tests and collect coverage
+        run: poetry run pytest --cov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
