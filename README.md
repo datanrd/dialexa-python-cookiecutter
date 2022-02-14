@@ -2,6 +2,8 @@
 
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/datanrd/dialexa-python-cookiecutter/develop.svg)](https://results.pre-commit.ci/latest/github/datanrd/dialexa-python-cookiecutter/develop)
 
+[![codecov](https://codecov.io/gh/datanrd/dialexa-python-cookiecutter/branch/develop/graph/badge.svg?token=NFT6UC1HAW)](https://codecov.io/gh/datanrd/dialexa-python-cookiecutter)
+
 
 Cookiecutter template for a Python package, built with popular develop tools and conform to best practice.
 
