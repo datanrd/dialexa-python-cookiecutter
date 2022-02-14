@@ -1,0 +1,36 @@
+site_name: Dialexa Python Cookiecutter
+site_repo: https://github.com/datanrd/dialexa-python-cookiecutter
+
+theme:
+  name: material
+  logo: assets/logo.png
+  features:
+    - toc.integrate
+  palatte:
+    accent: indigo
+
+nav:
+    - Introduction: 'index.md'
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+plugins:
+  - include-markdown
+  - search:
+      lang: en
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/dialexa
+      name: Github
+    - icon: material/email
+      link: "mailto:daniel.spence@dialexa.com"
+
+extra_css:
+  - stylesheets/extra.css
