@@ -24,6 +24,6 @@ jobs:
           path: ~/.cache/pypoetry/virtualenvs
           key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
       - name: Run tests and collect coverage
-        run: poetry run pytest --cov-report xml:cov.xml --cov
+        run: poetry run pytest --cov-report xml --cov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
