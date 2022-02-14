@@ -19,7 +19,11 @@ jobs:
       - uses: actions/setup-python@v2
       - uses: Gr1N/setup-poetry@v7
       - run: poetry install
+      - uses: actions/cache@v2
+        with:
+          path: ~/.cache/pypoetry/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('poetry.lock') }}
       - name: Run tests and collect coverage
-        run: poetry run pytest --cov
+        run: poetry run pytest --cov-report xml:cov.xml --cov
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v2
