@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-python@v2
       - uses: Gr1N/setup-poetry@v7
-      - run: poetry install --dev
+      - run: poetry install
       - run: git config user.name 'github-actions[bot]' && git config user.email 'github-actions[bot]@users.noreply.github.com'
       - name: Publish docs
         run: mkdocs gh-deploy
