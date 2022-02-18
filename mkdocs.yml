@@ -1,6 +1,7 @@
 site_name: Dialexa Python Cookiecutter
 site_repo: https://github.com/datanrd/dialexa-python-cookiecutter
-
+repo_url: https://github.com/datanrd/dialexa-python-cookiecutter
+repo_name: datanrd/dialexa-python-cookiecutter
 theme:
   name: material
   logo: assets/logo.png
@@ -8,6 +9,8 @@ theme:
     - toc.integrate
   palatte:
     accent: indigo
+  icon:
+    repo: fontawesome/brands/git-alt
 
 nav:
     - Introduction: 'index.md'

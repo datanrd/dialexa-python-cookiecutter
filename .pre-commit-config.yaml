@@ -19,7 +19,7 @@ repos:
     hooks:
     - id: commitizen
       stages:
-      - commit-msg
+        - commit-msg
 -   repo: https://github.com/pycqa/isort
     rev: 5.10.1
     hooks:
