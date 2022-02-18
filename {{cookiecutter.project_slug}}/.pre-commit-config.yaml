@@ -1,3 +1,4 @@
+
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
@@ -13,17 +14,12 @@ repos:
     rev: 22.1.0
     hooks:
     -  id: black
--   repo: https://github.com/Lucas-C/pre-commit-hooks-safety
-    rev: v1.2.2
-    hooks:
-    -   id: python-safety-dependencies-check
-        files: pyproject.toml
 -   repo: https://github.com/commitizen-tools/commitizen
-    rev: v2.20.4
+    rev: v2.20.5
     hooks:
     - id: commitizen
       stages:
-      - commit-msg
+        - commit-msg
 -   repo: https://github.com/pycqa/isort
     rev: 5.10.1
     hooks:
