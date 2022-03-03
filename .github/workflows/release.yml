@@ -7,12 +7,20 @@ on:
 
 jobs:
   bump-version:
-    if: "!startsWith(github.event.head_commit.message, 'bump:')"
+    if: |
+      !startsWith(github.event.head_commit.message, 'bump:') ||
+      !startsWith(github.event.head_commit.message, 'docs') ||
+      !startsWith(github.event.head_commit.message, 'style') ||
+      !startsWith(github.event.head_commit.message, 'chore') ||
+      !startsWith(github.event.head_commit.message, 'revert') ||
+      !startsWith(github.event.head_commit.message, 'ci')
     runs-on: ubuntu-latest
     name: "Bump version and create changelog with commitizen"
     steps:
       - name: Check out
         uses: actions/checkout@v2
+      - name: Delete Changelog
+        run: rm CHANGELOG.md
       - name: Create bump and changelog
         uses: commitizen-tools/commitizen-action@master
         with:
