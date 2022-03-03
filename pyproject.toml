@@ -47,6 +47,9 @@ tag_format = "$version"
 version_files = [
     "pyproject.toml:version"
 ]
+bump_pattern = "^(BREAKING[\\-\\ ]CHANGE|feat|fix|refactor|perf|build)(\\(.+\\))?(!)?"
+bump_map = {"^.+!$" = "MAJOR", "^BREAKING[\\-\\ ]CHANGE" = "MAJOR", "^feat" = "MINOR", "^fix" = "PATCH", "^refactor" = "PATCH", "^perf" = "PATCH", "^build" = "PATCH"}
+change_type_order = ["BREAKING CHANGE", "feat", "fix", "build", "refactor", "perf"]
 
 [tool.flakeheaven]
 format = "grouped"
